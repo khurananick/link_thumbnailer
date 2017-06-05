@@ -1,10 +1,26 @@
-require 'link_thumbnailer/scrapers/opengraph/base'
+require 'link_thumbnailer/scrapers/default/base'
 
 module LinkThumbnailer
   module Scrapers
-    module Opengraph
-      class Type < ::LinkThumbnailer::Scrapers::Opengraph::Base
+    module Default
+      class Type < ::LinkThumbnailer::Scrapers::Default::Base
+
+        def value
+          model.to_s
+        end
+
+        private
+
+        def model
+          modelize(node)
+        end
+
+        def node
+          document.css(attribute_name)
+        end
+
       end
     end
   end
 end
+
