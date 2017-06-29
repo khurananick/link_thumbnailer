@@ -15,7 +15,7 @@ module LinkThumbnailer
         end
 
         def node
-          document.css("meta[itemprop='articleSection']")
+          document.css("meta[itemprop='articleSection']").first
         end
       end
     end
