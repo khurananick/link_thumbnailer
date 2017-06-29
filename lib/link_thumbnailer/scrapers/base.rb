@@ -1,6 +1,7 @@
 require 'delegate'
 require 'link_thumbnailer/models/title'
 require 'link_thumbnailer/models/type'
+require 'link_thumbnailer/models/section'
 require 'link_thumbnailer/models/description'
 require 'link_thumbnailer/models/image'
 require 'link_thumbnailer/models/video'
