@@ -11,11 +11,11 @@ module LinkThumbnailer
         private
 
         def model
-          modelize(node)
+          modelize(node, node.attributes['content'].to_s) if node
         end
 
         def node
-          document.css(attribute_name)
+          document.css("meta[itemprop='articleSection']")
         end
       end
     end
